@@ -33,3 +33,22 @@ struct score_combination {
     //Declares the touchdown plus point field goal amount of the score combination to keep track of the amount of touchdown plus point field goal points are in the score combination
 	int touchdown_plus_point_field_goal_amount;
 };
+
+//Defineng a structure called nfl point system  to hold all the information of the the point system of the NFL scoring plays
+struct nfl_point_system {
+    //Declares the size of the nfl point systems that stores all point information
+	int size;
+    //Declared the touchdown point
+	int touchdown;
+    //Declared the field goal point
+	int field_goal;
+    //Declared the safety point
+	int safety;
+    //Declared the touchdown plus two conversion point
+	int touchdown_plus_two_conversion;
+    //Declared the touchdown plus point field goal point
+	int touchdown_plus_point_field_goal;
+    //Declared the point list to store all the point in th NFL point system.
+	int point_list[20];
+
+};
