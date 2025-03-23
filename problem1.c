@@ -10,3 +10,26 @@
 
 //GitHub Copilot was used to help code in the sense, when I was writing my code, it woudl help finsish or complete it. A lot of the comments were initally done by Github Copilot. I went back and rewrote all comments for every single line in the program.
 //ChaTtGPT was used in code error resolve, if I had any error in the coding process, I upload my code to see what was wrong and would correct it myself.
+
+//Included the header file library that enables input and output functionality
+#include <stdio.h>
+
+//Defineng a structure called score_combination to hold all the information of the score combination of the scoring plays
+struct score_combination {
+    //Declares the size of the score_combination to that stores the number of scoring plays in the score combination
+	int size;
+    //Declares the list of the score_combination to store all individual socrig palys.
+	int list[100];
+    //Declares the total scores of the entire score combiantion
+	int total_score;
+    //Declares the touchdown amount of the score combination to keep track of the amount of touchdown points are in the score combination
+	int touchdown_amount;
+    //Declares the field goal amount of the score combination to keep track of the amount of field goal points are in the score combination
+	int field_goal_amount;
+    //Declares the safety amount of the score combination to keep track of the amount of safety points are in the score combination
+	int safety_amount;
+    //Declares the touchdown plus two conversion amount of the score combination to keep track of the amount of touchdwon plus two two conversion points are in the score combination
+	int touchdown_plus_two_conversion_amount;
+    //Declares the touchdown plus point field goal amount of the score combination to keep track of the amount of touchdown plus point field goal points are in the score combination
+	int touchdown_plus_point_field_goal_amount;
+};
