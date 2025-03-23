@@ -10,3 +10,28 @@
 
 //GitHub Copilot was used to help code in the sense, when I was writing my code, it woudl help finsish or complete it. A lot of the comments were initally done by Github Copilot. I went back and rewrote all comments for every single line in the program.
 //ChaTtGPT was used in code error resolve, if I had any error in the coding process, I upload my code to see what was wrong and would correct it myself.
+
+
+//Included the header file library, that enables input and output functionality
+#include <stdio.h>
+
+
+//The main function is the entyr point into the whole program itself.
+int main()
+{
+	float user_temp_value;
+	char[20] user_temp_value_scale;
+	char[20] user_temp_conversion_target;
+
+	printf("Enter Temperature Value: ");
+	scanf("%f\n",&user_temp_value);
+	printf("Choose temperature scald of the value (Fahrenheit,Celsius,or Kelvin)");
+	scanf("%s\n",&user_temp_value_scale);
+	printf("Choose temperature conversion target of the value (Fahrenheit,Celsius,or Kelvin)");
+	scanf("%s\n",&user_temp_conversion_target);
+
+	convert_temp(user_temp_value,user_temp_value_scale,user_temp_conversion_target);
+
+    //Returns 0 to indicate the program ran smoothly
+	return 0;
+}
