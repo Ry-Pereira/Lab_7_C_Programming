@@ -14,7 +14,7 @@
 //Included the header file library that enables input and output functionality
 #include <stdio.h>
 
-//Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.
+//Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.https://www.youtube.com/watch?v=oKXP1HZ8xIs
 //ChatGPT helped in removing locating errors in making the structure.
 
 //Defineng a structure called score_combination to hold all the information of the score combination of the scoring plays
@@ -38,7 +38,7 @@ struct score_combination {
 };
 
 
-//Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.
+//Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.https://www.youtube.com/watch?v=oKXP1HZ8xIs
 //ChatGPT helped in removing locating errors in making the structure.
 
 //Defineng a structure called nfl point system  to hold all the information of the the point system of the NFL scoring plays
@@ -61,7 +61,7 @@ struct nfl_point_system {
 };
 
 //ChatGPT and this article from GeeksforGeeks: https://www.geeksforgeeks.org/combinations-with-repetitions/, helped in creating an algorithm for finding all possible combination that make up a specifc sum form a distinct set of numbers.
-//The alogirhtm structure is based on the article form GeeksforGeeks and Chatgpt, I did it my way  using structures and switch statements.
+//The alogirhtm structure below in this function is based on the article form GeeksforGeeks and Chatgpt, I did it my way using structures and switch statements.
 //Chatgpt also helped me with catchign duplicated combination such as getting combination like 3 2 2 and 2 2 3 or even 2 3 2. WIth the last point check suggestion
 
 //A void function that returns nothing. Finds possible combinations with the integer nfl score, structure nfl_point_system as current point system, structure score combination as current combo, and integer last point as arguments.
@@ -178,7 +178,7 @@ int main() {
 	nfl_point_system.point_list[4] = nfl_point_system.touchdown_plus_two_conversion_point;
 
     //ChatGPt helped me in initalizing the structures and the varibales, as it was producing errors as I was making it, so it helped in debugging.
-    
+
     //Declares and inializes a score combination strucutre named current score combo to hold all information regarding to the current score cobination based on the NFl score playings
 	struct score_combination current_score_combo;
     //Initializes the size of the current score combination to 0
