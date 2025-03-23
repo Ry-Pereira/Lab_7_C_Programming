@@ -14,6 +14,8 @@
 //Included the header file library that enables input and output functionality
 #include <stdio.h>
 
+//Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.
+
 //Defineng a structure called score_combination to hold all the information of the score combination of the scoring plays
 struct score_combination {
     //Declares the size of the score_combination to that stores the number of scoring plays in the score combination
@@ -34,6 +36,9 @@ struct score_combination {
 	int touchdown_plus_point_field_goal_point_amount;
 };
 
+
+
+
 //Defineng a structure called nfl point system  to hold all the information of the the point system of the NFL scoring plays
 struct nfl_point_system {
     //Declares the size of the nfl point systems that stores all point information
@@ -52,6 +57,80 @@ struct nfl_point_system {
 	int point_list[20];
 
 };
+
+
+//A void function that returns nothing. Finds possible combinations with the integer nfl score, structure nfl_point_system as current point system, structure score combination as current combo, and integer last point as arguments.
+void find_combination(int nfl_score,struct nfl_point_system current_point_system,struct score_combination current_combo, int last_point) {
+	//If the current combo total score is equal to nfl score, then its a valid combination to be printed out
+	if(current_combo.total_score == nfl_score) {
+        //Prints the combination of the NFL scoring plays
+		printf("Combination: ");
+        //For in loop to go through eaach scoring play point in the current combo, as as long as it does not exceed the size of the current combo, iterating throughe ahc point.
+		for(int i = 0; i< current_combo.size; i++) {
+            //Switch staement to check the current combo list at i index, to see which nfl distinct point it mathces to increment the amount of that specific point in the current combo
+			switch(current_combo.list[i]) {
+            //If the value at index i of the list in the current combo is 6, then it is a touchdown point, so it increments the touchdown amount of the current combo
+			case 6:
+                //Increments the current combo's touchdown amount
+				current_combo.touchdown_point_amount++;
+                //Breaks out of the switch statement
+				break;
+            //If the value at index i of the list in the current combo is 3, then it is a field goal point, so it increments the field goal amount of the current combo
+			case 3:
+                //Increments the current combo's field goal amount
+				current_combo.field_goal_point_amount++;
+                //Breaks out of the switch statement
+				break;
+            //If the value at index i of the list in the current combo is 2, then it is a safety point, so it increments the safety amount of the current combo
+			case 2:
+                //Increments the current combo's safety amount
+				current_combo.safety_point_amount++;
+                //Breaks out of the switch statement
+				break;
+            //If the value at index i of the list in the current combo is 8, then it is a touchdown plus two conversion point, so it increments the touchdown plus two conversion amount of the current combo
+			case 8:
+                //Increments the current combo's touchdown plus two conversion amount
+				current_combo.touchdown_plus_two_conversion_point_amount++;
+                //Breaks out of the switch statement
+				break;
+            //If the value at index i of the list in the current combo is 7, then it is a touchdown plus point field goal point, so it increments the touchdown plus point field goal amount of the current combo
+			case 7:
+                //Increments the current combo's touchdown plus point field goal amount
+				current_combo.touchdown_plus_point_field_goal_point_amount++;
+                //Breaks out of the switch statement
+				break;
+			}
+		}
+        //Prints the current combo score of the scorinh plays to the user
+		printf("%d TD + 2pt, %d TD + FG, %d TD, %d 3pt FG, %d Safety \n",current_combo.touchdown_plus_two_conversion_point_amount,current_combo.touchdown_plus_point_field_goal_point_amount,current_combo.touchdown_point_amount,current_combo.field_goal_point_amount,current_combo.safety_point_amount);
+		//Returns out of the function
+		return;
+
+	}
+    //If the current combo score is greater than the NFL score, then it returns as it execessd the nfl score.
+	if(current_combo.total_score > nfl_score) {
+        //Returns out of the function
+		return;
+	}
+	//Iterates through each point in the in the current point system size
+	for(int point = 0; point < current_point_system.size; point++) {
+	    //Checks to see if the curretn point system point index at the point list is greater than or equal to last point value, to maake sure duplicat combination wont make it in. Such as 3 2 2. Is the same a 2 2 3 or 2 3 2.
+		if(current_point_system.point_list[point] >= last_point) {
+		    //Sets the current combo list at the index of the curretn combo size to the value of the current point system at point index of the point list
+			current_combo.list[current_combo.size] = current_point_system.point_list[point];
+			//The current combo size is incremented as the sizr is icnreased of the additon of a scoring play
+			current_combo.size++;
+			//The current combo total score adds the value of the point at the index of the current point system point list to the total score
+			current_combo.total_score = current_combo.total_score + current_point_system.point_list[point];
+			//Recursively calls the find combination function with nfl score, curretn point system and current combo and the value of the point index at point list of the curretn point sytemt as last point as arguements for the function.
+			find_combination(nfl_score,current_point_system,current_combo,current_point_system.point_list[point]);
+			//The current combo size is decremented as the sizr is decreased of the subtaction of a scoring play, in order to chekc the next combination
+			current_combo.size--;
+			//The current combo total score subtracts the value of the point at the index of the current point system point list from the total score
+			current_combo.total_score = current_combo.total_score - current_point_system.point_list[point];
+		}
+	}
+}
 
 
 //The main function is the entyr point into the whole program itself.
