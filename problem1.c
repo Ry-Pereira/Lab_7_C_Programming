@@ -15,6 +15,7 @@
 #include <stdio.h>
 
 //Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.
+//ChatGPT helped in removing locating errors in making the structure.
 
 //Defineng a structure called score_combination to hold all the information of the score combination of the scoring plays
 struct score_combination {
@@ -37,7 +38,8 @@ struct score_combination {
 };
 
 
-
+//Brocode helped me in helping me try to define structures. Specifically getting the attributes to work.
+//ChatGPT helped in removing locating errors in making the structure.
 
 //Defineng a structure called nfl point system  to hold all the information of the the point system of the NFL scoring plays
 struct nfl_point_system {
@@ -58,9 +60,14 @@ struct nfl_point_system {
 
 };
 
+//ChatGPT and this article from GeeksforGeeks: https://www.geeksforgeeks.org/combinations-with-repetitions/, helped in creating an algorithm for finding all possible combination that make up a specifc sum form a distinct set of numbers.
+//The alogirhtm structure is based on the article form GeeksforGeeks and Chatgpt, I did it my way  using structures and switch statements.
+//Chatgpt also helped me with catchign duplicated combination such as getting combination like 3 2 2 and 2 2 3 or even 2 3 2. WIth the last point check suggestion
 
 //A void function that returns nothing. Finds possible combinations with the integer nfl score, structure nfl_point_system as current point system, structure score combination as current combo, and integer last point as arguments.
 void find_combination(int nfl_score,struct nfl_point_system current_point_system,struct score_combination current_combo, int last_point) {
+
+    //ChatGPT and GeeksforGeeks suggested this check
 	//If the current combo total score is equal to nfl score, then its a valid combination to be printed out
 	if(current_combo.total_score == nfl_score) {
         //Prints the combination of the NFL scoring plays
@@ -107,11 +114,17 @@ void find_combination(int nfl_score,struct nfl_point_system current_point_system
 		return;
 
 	}
+    //ChatGPt and GeeksforGeeks suggested this check to make sure the score did not exceed the nfl score
     //If the current combo score is greater than the NFL score, then it returns as it execessd the nfl score.
 	if(current_combo.total_score > nfl_score) {
         //Returns out of the function
 		return;
 	}
+    //ChatGPt and GeeksforGeeks suggested this check to set the current combo list array to the curretn point system point list array, and for utilizing recurse function to look for all possible functions.
+    //ChatGPT helped me in removing any duplicated combination by suggestin the last point paramaeter and check to make sure this does not happend
+
+    //If the current combo score is greater than the NFL score, then it returns as it execessd the nfl score.
+
 	//Iterates through each point in the in the current point system size
 	for(int point = 0; point < current_point_system.size; point++) {
 	    //Checks to see if the curretn point system point index at the point list is greater than or equal to last point value, to maake sure duplicat combination wont make it in. Such as 3 2 2. Is the same a 2 2 3 or 2 3 2.
@@ -135,6 +148,9 @@ void find_combination(int nfl_score,struct nfl_point_system current_point_system
 
 //The main function is the entyr point into the whole program itself.
 int main() {
+
+
+    //ChatGPt helped me in initalizing the structures and the varibales, as it was producing errors as I was making it, so it helped in debugging.
 
     //Declares and initalizes a nfl_point_system structure called nfl point system to store all the nfl point system information
 	struct nfl_point_system nfl_point_system;
@@ -161,6 +177,8 @@ int main() {
     //Initializes the point list at index 4 to the touchdown plus two conversion point
 	nfl_point_system.point_list[4] = nfl_point_system.touchdown_plus_two_conversion_point;
 
+    //ChatGPt helped me in initalizing the structures and the varibales, as it was producing errors as I was making it, so it helped in debugging.
+    
     //Declares and inializes a score combination strucutre named current score combo to hold all information regarding to the current score cobination based on the NFl score playings
 	struct score_combination current_score_combo;
     //Initializes the size of the current score combination to 0
