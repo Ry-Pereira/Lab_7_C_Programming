@@ -17,6 +17,39 @@
 
 
 
+float celsius_to_fahrenheit(float celsius) {
+	float fahrenheit_value = (9/5)*celsius + 32;
+	return fahrenheit_value;
+}
+float fahrenheit_to_ceslsius(float fahrenheit) {
+	float celsius_value = (5/9)*(fahrenheit-32);
+	return celsius_value;
+}
+
+
+float celsius_to_kelvins(float celsius) {
+	float kelvins_value = celsius + 273.15;
+	return kelvins_value;
+}
+
+float kelvins_to_celsius(float kelvins) {
+	float celsius_value = kelvins - 273.15;
+	return celsius_value;
+}
+
+float kelvins_to_fahrenheit(float kelvins) {
+	float celsius_value = kelvins_to_celsius(kelvins);
+	float fahrenheit_value = (9/5)*celsius_value + 32;
+	return fahrenheit_value;
+}
+float fahrenheit_to_kelvins(float fahrnheit) {
+	float celsius_value = fahrenheit_to_ceslsius(fahrnheit);
+	float kelvins_value = (5/9)*(celsius_value-32);
+	return kelvins_value;
+}
+
+
+
 void temperature_conversion(float temp_value,int temp_value_scale,int  temp_conversion_target) {
     //Declares temp result to store the converted temp result value
 	float temp_result;
