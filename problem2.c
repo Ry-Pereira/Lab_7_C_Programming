@@ -72,13 +72,14 @@ float fahrenheit_to_kelvins(float fahrnheit) {
 //Function to categorize temperature value, with temp value and temp conversion target as arguments
 void categorize_temperature(float temp_value, int temp_conversion_target) {
     //If the temp conversion target is 1, then it will categorize the Fahreheit converted temperature
-    printf("Weather Advisory");
+    
 	if(temp_conversion_target == 1) {
         //If the Temp  value is less than 14, it is freezing, with a weather advisory message for the user
 		if(temp_value < 14) {
             //Prints to the user the temperaturre is freezing
 			printf("Temperature Category: Freezing\n");
             //Prints to the user to wear a coat and some gloves
+            printf("Weather Advisory: ");
 			printf("Wear a coat and some gloves\n");
 		}
         //If the Temp  value is greater than or equal to 14 and is lesser than or equal to 50, it is cold with aweather advisory message to user.
@@ -86,6 +87,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
             //Prints to the user the temperaturre is cold
 			printf("Temperature Category: Cold\n");
             //Prints to the user to wear a jacket or a hoodie
+            printf("Weather Advisory: ");
 			printf("Wear a  jacket or a hoodie\n");
 		}
         //If the Temp  value is greater than or equal to 50 and is lesser than or equal to 86, it is ccomfortable with aweather advisory message to user.
@@ -93,6 +95,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is comfortable
 			printf("Temperature Category: Comfortable\n");
             //Prints to the user to wear comfortably
+            printf("Weather Advisory: ");
 			printf("Wear comfortably, obviously\n");
 		}
         //If the Temp  value is greater than or equal to 86 and is lesser than or equal to 104, it is hot with aweather advisory message to user.
@@ -100,6 +103,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
             //Prints to to the user the temperature is Hot
 			printf("Temperature Category: Hot\n");
             //Prints to the user to wear loose wear
+            printf("Weather Advisory: ");
 			printf("Wear loose wear\n");
 		}
         //If the Temp  value is greater than  104, it is hot with aweather advisory message to user.
@@ -107,6 +111,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
             //Prints to to the user the temperature is Extremely Hot
 			printf("Temperature Category: Extremely Hot\n");
             //Prints to the user to wear loose wear and drink lots of water
+            printf("Weather Advisory: ");
 			printf("Wear looser wear, drink lots of waters\n");
 		}
 
@@ -118,6 +123,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
             //Prints to the user the temperaturre is freezing
 			printf("Temperature Category: Freezing\n");
             //Prints to the user to wear a coat and some gloves
+            printf("Weather Advisory: ");
 			printf("Wear a coat and some gloves\n");
 		}
         //If the Temp  value is greater than or equal to -10 and is lesser than or equal to 18, it is cold with aweather advisory message to user.
@@ -125,6 +131,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
             //Prints to to the user the temperature is cold
 			printf("Temperature Category: Cold\n");
             //Prints to the user to wear a jacket or a hoodie
+            printf("Weather Advisory: ");
 			printf("Wear a jacket or a hoodie\n");
 		}
         //If the Temp  value is greater than or equal to 18 and is lesser than or equal to 30, it is comfortable with aweather advisory message to user.
@@ -132,6 +139,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
             //Prints to to the user the temperature is comfortable
 			printf("Temperature Category: Comfortable\n");
             //Prints to the user to wear comfortably
+            printf("Weather Advisory: ");
 			printf("Wear comfortably, obviiosly\n");
 		}
         //If the Temp  value is greater than or equal to 30 and is lesser than or equal to 42, it is hot with aweather advisory message to user.
@@ -139,6 +147,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is Hot
 			printf("Temperature Category: Hot\n");
             //Prints to the user to wear loose wear
+            printf("Weather Advisory: ");
 			printf("Wear loose wear\n");
 		}
         //If the Temp  value is greater than  42, it is hot with aweather advisory message to user.
@@ -146,6 +155,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is Extremely Hot
 			printf("Temperature Category: Extremely Hot\n");
             //Prints to the user to wear loose wear and drink lots of water
+            printf("Weather Advisory: ");
 			printf("Wear looser wear, drink lots of waters\n");
 		}
 
@@ -157,6 +167,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to the user the temperaturre is freezing
 			printf("Temperature Category: Freezing\n");
             //Prints to the user to wear a coat and some gloves
+            printf("Weather Advisory: ");
 			printf("Wear a coat and some gloves\n");
 		}
         //If the Temp  value is greater than or equal to 263 and is lesser than or equal to 291, it is cold with aweather advisory message to user.
@@ -164,6 +175,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is cold
 			printf("Temperature Category: Cold\n");
             //Prints to the user to wear a jacket or a hoodie
+            printf("Weather Advisory: ");
 			printf("Wear a jacket or a hoodie\n");
 		}
         //If the Temp  value is greater than or equal to 291 and is lesser than or equal to 300, it is comfortable with a weather advisory message to user.
@@ -171,6 +183,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is comfortable
 			printf("Temperature Category: Comfortable\n");
             //Prints to the user to wear comfortably
+            printf("Weather Advisory: ");
 			printf("Wear comfortably, obviiosly\n");
 		}
         //If the Temp  value is greater than or equal to 300 and is lesser than or equal to 320, it is hot with aweather advisory message to user.
@@ -178,6 +191,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is Hot
 			printf("Temperature Category: Hot\n");
             //Prints to the user to wear loose wear
+            printf("Weather Advisory: ");
 			printf("Wear loose wear\n");
 		}
         //If the Temp  value is greater than  320, it is hot with aweather advisory message to user.
@@ -185,6 +199,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is Extremely Hot
 			printf("Temperature Category: Extremely Hot\n");
             //Prints to the user to wear loose wear and drink lots of water
+            printf("Weather Advisory: ");
 			printf("Wear looser wear, drink lots of waters\n");
 		}
 
@@ -221,7 +236,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 				//Stores the temperature result of converting the temperature value from farenheit to celsisus
 				temp_result = fahrenheit_to_celsius(temp_value);
                 //Prints the converted temperature value
-				printf("Converted Temperature: %.2f \n",temp_result);
+				printf("Converted Temperature: %.2f C \n",temp_result);
                 //Categorizes the temperature vale with temp resutl and temp conversion target as arguments
 				categorize_temperature(temp_result,temp_conversion_target);
 			}
@@ -230,7 +245,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 				//Stores the temperature result of converting the temperature value from celsius to fahrenheit
 				temp_result = celsius_to_fahrenheit(temp_value);
                 //Prints the converted temperature value
-				printf("Converted Temperature: %.2f \n",temp_result);
+				printf("Converted Temperature: %.2f F\n",temp_result);
                 //Categorizes the temperature vale with temp resutl and temp conversion target as arguments
 				categorize_temperature(temp_result,temp_conversion_target);
 
@@ -240,7 +255,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 				//Stores the temperature result of converting the temperature value from farenheit to kelvins
 				temp_result = fahrenheit_to_kelvins(temp_value);
                 //Prints the converted temperature value
-				printf("Converted Temperature: %.2f \n",temp_result);
+				printf("Converted Temperature: %.2f K\n",temp_result);
                 //Categorizes the temperature vale with temp resutl and temp conversion target as arguments
 				categorize_temperature(temp_result,temp_conversion_target);
 			}
@@ -249,7 +264,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 				//Stores the temperature result of converting the temperature value from kelvins to fahrenheit
 				temp_result = kelvins_to_fahrenheit(temp_value);
                 //Prints the converted temperature value
-				printf("Converted Temperature: %.2f \n",temp_result);
+				printf("Converted Temperature: %.2f F\n",temp_result);
                 //Categorizes the temperature vale with temp resutl and temp conversion target as arguments
 				categorize_temperature(temp_result,temp_conversion_target);
 			}
@@ -258,7 +273,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 				//Stores the temperature result of converting the temperature value from celsius to kelvins
 				temp_result = celsius_to_kelvins(temp_value);
                 //Prints the converted temperature value
-				printf("Converted Temperature: %.2f \n",temp_result);
+				printf("Converted Temperature: %.2f K\n",temp_result);
                 //Categorizes the temperature vale with temp resutl and temp conversion target as arguments
 				categorize_temperature(temp_result,temp_conversion_target);
 			}
@@ -267,7 +282,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 				//Stores the temperature result of converting the temperature value from kelvins to celsisus
 				temp_result = kelvins_to_celsius(temp_value);
                 //Prints the converted temperature value
-				printf("Converted Temperature: %.2f \n",temp_result);
+				printf("Converted Temperature: %.2f C\n",temp_result);
                 //Categorizes the temperature vale with temp resutl and temp conversion target as arguments
 				categorize_temperature(temp_result,temp_conversion_target);
 			}
