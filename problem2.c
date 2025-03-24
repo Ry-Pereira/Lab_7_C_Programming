@@ -294,11 +294,11 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 		//Scans the user input and stores in the user temp value
 		scanf("%f",&user_temp_value);
 		//Prints to the user to choose the temperature scal of the value
-		printf("Choose temperature scale of the value (1:Fahrenheit,2:Celsius,or 3:Kelvin)");
+		printf("Choose temperature scale of the value (1:Fahrenheit,2:Celsius,or 3:Kelvin): ");
 		//Scans the user input and stores in the user temp value scale
 		scanf("%d",&user_temp_value_scale);
 		//Prints to the user to choose the temperature conversion target of the value
-		printf("Choose temperature conversion target of the value (1:Fahrenheit,2:Celsius,or 3:Kelvin");
+		printf("Choose temperature conversion target of the value (1:Fahrenheit,2:Celsius,or 3:Kelvin): ");
 		//Scans the user input and stores in the user temp conversion target
 		scanf("%d",&user_temp_conversion_target);
         //Prints to the user with a new line
