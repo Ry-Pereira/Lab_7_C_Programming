@@ -49,6 +49,79 @@ float fahrenheit_to_kelvins(float fahrnheit) {
 }
 
 
+void categorize_temperature(float temp_value, int temp_conversion_target){
+    if(temp_conversion_target == 1){
+        if(temp_value < 14){
+            printf("Temperature Category: Freezing\n");
+            printf("Wear a coat and some gloves\n");
+        }
+        if(temp_value >= 14 && temp_value <= 50){
+            printf("Temperature Category: Cold\n");
+            printf("Wear a a jacket or a hoodie\n");
+        }
+        if(temp_value >= 50 && temp_value <= 86){
+            printf("Temperature Category: Comfortable\n");
+            printf("Wear comfortably, obviiosly\n");
+        }
+        if(temp_value >= 86 && temp_value <= 104){
+            printf("Temperature Category: Hot\n");
+            printf("Wear loose wear\n");
+        }
+        if(temp_value > 104){
+            printf("Temperature Category: Extremely Hot\n");
+            printf("Wear looser wear, drink lots of waters\n");
+        }
+
+    }
+    if(temp_conversion_target == 2){
+        if(temp_value < -10){
+            printf("Temperature Category: Freezing\n");
+            printf("Wear a coat and some gloves\n");
+        }
+        if(temp_value >= -10 && temp_value <= 18){
+            printf("Temperature Category: Cold\n");
+            printf("Wear a a jacket or a hoodie\n");
+        }
+        if(temp_value >= 18 && temp_value <= 30){
+            printf("Temperature Category: Comfortable\n");
+            printf("Wear comfortably, obviiosly\n");
+        }
+        if(temp_value >= 30 && temp_value <= 42){
+            printf("Temperature Category: Hot\n");
+            printf("Wear loose wear\n");
+        }
+        if(temp_value > 42){
+            printf("Temperature Category: Extremely Hot\n");
+            printf("Wear looser wear, drink lots of waters\n");
+        }
+        
+    }
+    if(temp_conversion_target == 3){
+        if(temp_value < 263){
+            printf("Temperature Category: Freezing\n");
+            printf("Wear a coat and some gloves\n");
+        }
+        if(temp_value >= 263 && temp_value <= 291){
+            printf("Temperature Category: Cold\n");
+            printf("Wear a a jacket or a hoodie\n");
+        }
+        if(temp_value >= 291 && temp_value <= 300){
+            printf("Temperature Category: Comfortable\n");
+            printf("Wear comfortably, obviiosly\n");
+        }
+        if(temp_value >= 300 && temp_value <= 320){
+            printf("Temperature Category: Hot\n");
+            printf("Wear loose wear\n");
+        }
+        if(temp_value > 320){
+            printf("Temperature Category: Extremely Hot\n");
+            printf("Wear looser wear, drink lots of waters\n");
+        }
+        
+    }
+
+
+
 
 void temperature_conversion(float temp_value,int temp_value_scale,int  temp_conversion_target) {
     //Declares temp result to store the converted temp result value
@@ -76,32 +149,38 @@ void temperature_conversion(float temp_value,int temp_value_scale,int  temp_conv
 	if(temp_value_scale == 1 && temp_conversion_target == 2 ) {
         //Stores the temperature result of converting the temperature value from farenheit to celsisus
 		temp_result = fahrenheit_to_ceslsius(temp_value);
+        printf("Converted Temperature: %f °C",temp_result);
 	}
     //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
 	else if(temp_value_scale == 2 && temp_conversion_target == 1) {
         //Stores the temperature result of converting the temperature value from celsius to fahrenheit
 		temp_result = celsius_to_fahrenheit(temp_value);
+        printf("Converted Temperature: %f °F",temp_result);
 
 	}
     //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
 	else if(temp_value_scale == 1 && temp_conversion_target == 3) {
         //Stores the temperature result of converting the temperature value from farenheit to kelvins
 		temp_result = fahrenheit_to_kelvins(temp_value);
+        printf("Converted Temperature: %f °K",temp_result);
 	}
     //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
 	else if(temp_value_scale == 3 && temp_conversion_target == 1 ) {
         //Stores the temperature result of converting the temperature value from kelvins to fahrenheit
 		temp_result = kelvins_to_fahrenheit(temp_value);
+        printf("Converted Temperature: %f °F",temp_result);
 	}
     //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
 	else if(temp_value_scale == 2 && temp_conversion_target == 3) {
         //Stores the temperature result of converting the temperature value from celsius to kelvins
 		temp_result = celsius_to_kelvins(temp_value);
+        printf("Converted Temperature: %f °K",temp_result);
 	}
     //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
-	else if(user_temp_value_scale == 3 && temp_conversion_target == 2) {
+	else if(temp_value_scale == 3 && temp_conversion_target == 2) {
         //Stores the temperature result of converting the temperature value from kelvins to celsisus
 		temp_result = kelvins_to_celsius(temp_value);
+        printf("Converted Temperature: %f °C",temp_result);
 	}
     //If either the user temp value scale or user temp convertion target is not valis or the same
 	else {
