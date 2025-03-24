@@ -17,6 +17,67 @@
 
 
 
+void temperature_conversion(float temp_value,int temp_value_scale,int  temp_conversion_target) {
+    //Declares temp result to store the converted temp result value
+	float temp_result;
+
+    //If the user temp scale is Fahrneheit and temp value is belowe the absolute zero point, the user will be notified that they need to input a valid Fahrenheit temperature
+    if(temp_value_scale == 1 && temp_value < -459.67) {
+        //Prints to the user the Fahrenheit temperature is below the absolute zero point, and to enter a valid temperature
+        printf("The Fahrenheit temperature is below absolute zero point, please enter a valid temperature value");
+    }
+    //If the user temp scale is Celsius and temp value is belowe the absolute zero point, the user will be notified that they need to input a valid Celsius temperature
+    else if(temp_value_scale == 2 && temp_value < -273.15){
+        //Prints to the user the Celsius temperature is below the absolute zero point, and to enter a valid temperature
+        printf("The Celsius temperature is below absolute zero point, please enter a valid temperature value");
+    }
+    //If the user temp scale is Kelvin and temp value is belowe the absolute zero point, the user will be notified that they need to input a valid Kelvin temperature
+    else if(temp_value_scale == 3 && temp_value < 0){
+        //Prints to the user the Kelvins temperature is below the absolute zero point, and to enter a valid temperature
+        printf("The Kelvins temperature is below absolute zero point, please enter a valid temperature value");
+    }
+    //If it meets all the conditions of valid temperautre value based on the temperature value scale
+    else{
+
+    //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
+	if(temp_value_scale == 1 && temp_conversion_target == 2 ) {
+        //Stores the temperature result of converting the temperature value from farenheit to celsisus
+		temp_result = fahrenheit_to_ceslsius(temp_value);
+	}
+    //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
+	else if(temp_value_scale == 2 && temp_conversion_target == 1) {
+        //Stores the temperature result of converting the temperature value from celsius to fahrenheit
+		temp_result = celsius_to_fahrenheit(temp_value);
+
+	}
+    //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
+	else if(temp_value_scale == 1 && temp_conversion_target == 3) {
+        //Stores the temperature result of converting the temperature value from farenheit to kelvins
+		temp_result = fahrenheit_to_kelvins(temp_value);
+	}
+    //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
+	else if(temp_value_scale == 3 && temp_conversion_target == 1 ) {
+        //Stores the temperature result of converting the temperature value from kelvins to fahrenheit
+		temp_result = kelvins_to_fahrenheit(temp_value);
+	}
+    //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
+	else if(temp_value_scale == 2 && temp_conversion_target == 3) {
+        //Stores the temperature result of converting the temperature value from celsius to kelvins
+		temp_result = celsius_to_kelvins(temp_value);
+	}
+    //If the user temp value scale is 1 and user temp convertion target is 2, than it will be converted from fahrenheit to celsius
+	else if(user_temp_value_scale == 3 && temp_conversion_target == 2) {
+        //Stores the temperature result of converting the temperature value from kelvins to celsisus
+		temp_result = kelvins_to_celsius(temp_value);
+	}
+    //If either the user temp value scale or user temp convertion target is not valis or the same
+	else {
+        //Pritns to the user that the input is invalid, that they need to input a valid temperature scale and ocnvertion target that is not of the same termperature setting
+		printf("Please enter a valid temperature scale and conversion target that is also the equivalent to each other.");
+	}
+}
+}
+
 //The main function is the entyr point into the whole program itself.
 int main()
 {
