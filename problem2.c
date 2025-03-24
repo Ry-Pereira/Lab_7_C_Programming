@@ -16,6 +16,9 @@
 #include <stdio.h>
 
 
+
+//ChatGPT was use fore debugging. ALso for helpin in converting between the temperature scales
+
 //Function that converts float celsius to fahrenheit temperature
 float celsius_to_fahrenheit(float celsius) {
     //Float fahrenheit value is set to the product of 9/5 multiplied by the celsiis plus 32.0
@@ -63,6 +66,9 @@ float fahrenheit_to_kelvins(float fahrnheit) {
 	return kelvins_value;
 }
 
+//ChatGPT was used to help in categorinze the temperature in find the ranges of the tmeperature values
+
+//Categorizes the temperature vale with temp resutl and temp conversion target as arguments 
 //Function to categorize temperature value, with temp value and temp conversion target as arguments
 void categorize_temperature(float temp_value, int temp_conversion_target) {
     //If the temp conversion target is 1, then it will categorize the Fahreheit converted temperature
@@ -186,7 +192,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 
 
 
-
+    //Function to convert temperatures between temperatures scales to the target specified by the user
 	void temperature_conversion(float temp_value,int temp_value_scale,int  temp_conversion_target) {
 		//Declares temp result to store the converted temp result value
 		float temp_result;
