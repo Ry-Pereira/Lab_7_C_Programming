@@ -16,20 +16,31 @@
 #include <stdio.h>
 
 
+
 //The main function is the entyr point into the whole program itself.
 int main()
 {
+    //Declares the float user temp value to sotre the temperature value of the user
 	float user_temp_value;
-	char[20] user_temp_value_scale;
-	char[20] user_temp_conversion_target;
 
+    //Declares the integer user temp value scale to store the temp value scale from the user
+	int user_temp_value_scale;
+    //Declares the integer user temp conversion target to store the temp conversion target from the user
+	int user_temp_conversion_target;
+    //Prints to the user to enter the temperature value
 	printf("Enter Temperature Value: ");
+    //Scans the user input and stores in the user temp value
 	scanf("%f\n",&user_temp_value);
+    //Prints to the user to choose the temperature scal of the value
 	printf("Choose temperature scald of the value (Fahrenheit,Celsius,or Kelvin)");
-	scanf("%s\n",&user_temp_value_scale);
+    //Scans the user input and stores in the user temp value scale
+	scanf("%d\n",&user_temp_value_scale);
+    //Prints to the user to choose the temperature conversion target of the value
 	printf("Choose temperature conversion target of the value (Fahrenheit,Celsius,or Kelvin)");
-	scanf("%s\n",&user_temp_conversion_target);
+    //Scans the user input and stores in the user temp conversion target
+	scanf("%d\n",&user_temp_conversion_target);
 
+    //Executes the convert temp function with user temp calue, user temp value scale, and the user temp conversion target as arguments passed in
 	convert_temp(user_temp_value,user_temp_value_scale,user_temp_conversion_target);
 
     //Returns 0 to indicate the program ran smoothly
