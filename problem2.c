@@ -72,6 +72,7 @@ float fahrenheit_to_kelvins(float fahrnheit) {
 //Function to categorize temperature value, with temp value and temp conversion target as arguments
 void categorize_temperature(float temp_value, int temp_conversion_target) {
     //If the temp conversion target is 1, then it will categorize the Fahreheit converted temperature
+    printf("Weather Advisory");
 	if(temp_conversion_target == 1) {
         //If the Temp  value is less than 14, it is freezing, with a weather advisory message for the user
 		if(temp_value < 14) {
@@ -92,7 +93,7 @@ void categorize_temperature(float temp_value, int temp_conversion_target) {
 			//Prints to to the user the temperature is comfortable
 			printf("Temperature Category: Comfortable\n");
             //Prints to the user to wear comfortably
-			printf("Wear comfortably, obviiosly\n");
+			printf("Wear comfortably, obviously\n");
 		}
         //If the Temp  value is greater than or equal to 86 and is lesser than or equal to 104, it is hot with aweather advisory message to user.
 		else if(temp_value >= 86 && temp_value <= 104) {
